@@ -1,52 +1,160 @@
-﻿<!doctype html>
-<html>
-
+<!DOCTYPE html>
+<html lang="es">
 <head>
-   <title> Ejercicio: hipervinculos </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colegio Técnico Industrial Nuñoa</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: #f0f0f0;
+        }
+        header {
+            background: #003366;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background: #002244;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            padding: 14px 20px;
+            color: white;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background: #004488;
+        }
+        .slider {
+            width: 100%;
+            overflow: hidden;
+        }
+        .slides {
+            display: flex;
+            width: 300%;
+            animation: slide 12s infinite;
+        }
+        .slides img {
+            width: 100%;
+        }
+        @keyframes slide {
+            0% { margin-left: 0; }
+            33% { margin-left: -100%; }
+            66% { margin-left: -200%; }
+            100% { margin-left: 0; }
+        }
+        section {
+            padding: 20px;
+            background: white;
+            margin: 20px;
+            border-radius: 10px;
+        }
+        .galeria {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        .galeria img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        footer {
+            background: #002244;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+    </style>
 </head>
-
 <body>
 
-<h1 id="inicio"> Hipervinculos </h1>
+<header>
+    <h1>Colegio Técnico Industrial Nuñoa</h1>
+    <p>Formando Profesionales Técnicos con Excelencia</p>
+</header>
 
-<h2>Hipervinculos internos</h2>
-<a href="#final">Ir al final</a>   
+<nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#historia">Historia</a>
+    <a href="#especialidades">Especialidades</a>
+    <a href="#galeria">Galería</a>
+    <a href="#videos">Videos</a>
+    <a href="#contacto">Contacto</a>
+</nav>
 
-<h2>Hipervinculos a otra pagina HTML</h2>
-<a href="html-link2.html">
-Enlace a otra pagina de HTML
-</a>
+<section id="inicio" class="slider">
+    <div class="slides">
+        <img src="img/slide1.jpg" alt="Institución">
+        <img src="img/slide2.jpg" alt="Estudiantes">
+        <img src="img/slide3.jpg" alt="Actividades">
+    </div>
+</section>
 
-<h2>Hipervinculos a un archivo</h2>
-<a href="texto.rtf">
-Enlace a un archivo en formato Word
-</a>
+<section id="historia">
+    <h2>Historia del Colegio</h2>
+    <p>
+        El Colegio Técnico Industrial Nuñoa es una institución con tradición educativa,
+        dedicada a la formación de jóvenes en áreas técnicas e industriales, contribuyendo al desarrollo
+        del distrito de Nuñoa y la región de Melgar.
+    </p>
+</section>
 
-<h2>Hipervinculos a una pagina web</h2>
-<a href="https://es.wikipedia.org/wiki/HTML">
-Enlace a Wikipedia. Articulo HTML.
-</a>
+<section id="especialidades">
+    <h2>Especialidades Técnicas</h2>
+    <ul>
+        <li>Mecánica de Producción</li>
+        <li>Computación e Informática</li>
+        <li>Industria del Vestido</li>
+    </ul>
+</section>
 
-<p style="margin-top:800px"> Separacion </p>
+<section id="galeria">
+    <h2>Galería de Imágenes</h2>
+    <div class="galeria">
+        <img src="img/g1.jpg" alt="Taller 1">
+        <img src="img/g2.jpg" alt="Taller 2">
+        <img src="img/g3.jpg" alt="Estudiantes">
+        <img src="img/g4.jpg" alt="Laboratorios">
+        <img src="img/g5.jpg" alt="Eventos">
+        <img src="img/g6.jpg" alt="Ceremonias">
+    </div>
+</section>
 
-<h2 id="final">Hipervinculos internos</h2>
-<a href="#inicio">Ir al inicio</a>
+<section id="videos">
+    <h2>Videos Institucionales</h2>
+    <video width="100%" controls>
+        <source src="videos/video1.mp4" type="video/mp4">
+        Tu navegador no soporta el video.
+    </video>
+    <br><br>
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+</section>
 
-<p>Ejemplo de una fotografia insertada con formato
-   JPG:</P>
-<img src="beach-01.jpg" alt="Fotografia de playa">
+<section id="contacto">
+    <h2>Contacto</h2>
+    <p><strong>Dirección:</strong> Nuñoa, Melgar - Puno</p>
+    <p><strong>Email:</strong> tecnicoindustrial@nunoa.edu.pe</p>
+    <p><strong>Teléfono:</strong> +51 987 654 321</p>
 
+    <p>Síguenos en nuestras redes:</p>
+    <ul>
+        <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+        <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+        <li><a href="https://youtube.com" target="_blank">YouTube</a></li>
+    </ul>
+</section>
 
-</p>
-
-<!--Video de Youtube insertado -->
-<iframe width="704" height="396" src="https://www.youtube.com/embed/E7MskFU95-M"
- title="Un informe alerta sobre el mal estado de la educación en América Latina" 
-frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
-gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"
- allowfullscreen></iframe>
+<footer>
+    <p>© 2025 Colegio Técnico Industrial Nuñoa — Todos los derechos reservados.</p>
+</footer>
 
 </body>
-
-
 </html>
+
